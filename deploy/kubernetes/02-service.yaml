@@ -7,11 +7,11 @@ metadata:
     app.kubernetes.io/name: key-submission
     app.kubernetes.io/part-of: covidshield
 spec:
-  type: ClusterIP
+  type: NodePort
   ports:
-  - port: 8000
-    targetPort: 8000
-    protocol: TCP
+    - port: 8000
+      targetPort: 8000
+      protocol: TCP
   selector:
     app.kubernetes.io/name: key-submission
     app.kubernetes.io/part-of: covidshield
@@ -25,11 +25,11 @@ metadata:
     app.kubernetes.io/name: key-retrieval
     app.kubernetes.io/part-of: covidshield
 spec:
-  type: ClusterIP
+  type: NodePort
   ports:
-  - port: 8001
-    targetPort: 8001
-    protocol: TCP
+    - port: 8001
+      targetPort: 8001
+      protocol: TCP
   selector:
     app.kubernetes.io/name: key-retrieval
     app.kubernetes.io/part-of: covidshield
